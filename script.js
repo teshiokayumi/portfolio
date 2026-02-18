@@ -38,7 +38,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
         navLinks.forEach(link => {
             link.classList.remove('active-nav');
-            if (link.getAttribute('href').includes(current)) {
+            const hrefId = link.getAttribute('href').substring(1);
+            if (current.includes(hrefId)) {
                 link.classList.add('active-nav');
             }
         });
