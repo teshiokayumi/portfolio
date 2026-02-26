@@ -1,6 +1,6 @@
 document.addEventListener('DOMContentLoaded', () => {
     const slides = document.querySelectorAll('.slide');
-    
+
     // Intersection Observer for active class
     const observerOptions = {
         threshold: 0.5
@@ -45,12 +45,34 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
+    // Works Tab Logic
+    const tabBtns = document.querySelectorAll('.tab-btn');
+    const tabPanes = document.querySelectorAll('.tab-pane');
+
+    tabBtns.forEach(btn => {
+        btn.addEventListener('click', () => {
+            const target = btn.getAttribute('data-tab');
+
+            // Update buttons
+            tabBtns.forEach(b => b.classList.remove('active'));
+            btn.classList.add('active');
+
+            // Update panes
+            tabPanes.forEach(pane => {
+                pane.classList.remove('active');
+                if (pane.getAttribute('id') === target) {
+                    pane.classList.add('active');
+                }
+            });
+        });
+    });
+
     // subtle mouse movement effect for decoration
     const decoElements = document.querySelectorAll('.square-deco');
     window.addEventListener('mousemove', (e) => {
         const moveX = (e.clientX - window.innerWidth / 2) / 50;
         const moveY = (e.clientY - window.innerHeight / 2) / 50;
-        
+
         decoElements.forEach((el, index) => {
             const speed = (index + 1) * 0.5;
             el.style.transform = `translate(${moveX * speed}px, ${moveY * speed}px)`;
