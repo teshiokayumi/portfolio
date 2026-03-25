@@ -304,6 +304,38 @@ h3,
   background-color: white;
 }
 
+.hero-badges {
+  margin: 15px 0;
+  display: flex;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+
+.badge {
+  background: white;
+  color: var(--text-dark);
+  padding: 8px 16px;
+  border-radius: 50px;
+  font-size: 0.9rem;
+  font-weight: 500;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  border: 1px solid var(--accent);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  transition: transform 0.3s;
+}
+
+.badge:hover {
+  transform: translateY(-2px);
+  background: var(--accent);
+  color: white;
+}
+
+.badge-icon {
+  font-size: 1.1rem;
+}
+
 .small-name {
   font-size: 2.2rem !important;
   /* Smaller as requested */
@@ -326,12 +358,35 @@ h3,
 
 .news-list {
   list-style: none;
+  max-height: 120px;
+  overflow-y: auto;
+  padding-right: 10px;
+}
+
+.news-list::-webkit-scrollbar {
+  width: 4px;
+}
+
+.news-list::-webkit-scrollbar-thumb {
+  background: var(--accent);
+  border-radius: 10px;
 }
 
 .news-list li {
-  font-size: 0.95rem;
-  margin-bottom: 8px;
+  font-size: 0.9rem;
+  margin-bottom: 12px;
   line-height: 1.4;
+  display: flex;
+  gap: 10px;
+  align-items: flex-start;
+}
+
+.news-date {
+  font-weight: 600;
+  color: #666;
+  white-space: nowrap;
+  font-size: 0.8rem;
+  padding-top: 2px;
 }
 
 .news-tag {
