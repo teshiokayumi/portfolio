@@ -863,65 +863,64 @@ h3,
   border: 1px solid var(--accent);
 }
 
-/* GPT Showcase Section */
-.gpt-showcase {
-  margin-bottom: 20px;
-}
-
-.gpt-scroll-container {
-  min-height: 300px;
-  max-height: 350px;
+/* Education Tab - Full page scroll */
+#tab-edu {
+  height: 100%;
   overflow-y: auto;
   overflow-x: hidden;
-  padding-right: 20px;
-  background: rgba(255, 255, 255, 0.4);
-  border-radius: 15px;
   padding: 20px;
-  padding-top: 25px;
-  border: 2px solid rgba(216, 143, 178, 0.3);
-  position: relative;
 }
 
-/* Scroll Indicator */
-.gpt-scroll-container::before {
-  content: "▼ Scroll ▼";
-  display: block;
-  text-align: center;
-  font-size: 0.75rem;
-  color: var(--accent);
-  margin-bottom: 15px;
-  padding-bottom: 10px;
-  border-bottom: 1px dashed rgba(216, 143, 178, 0.4);
-  letter-spacing: 2px;
+/* Custom scrollbar for education tab */
+#tab-edu::-webkit-scrollbar {
+  width: 14px;
 }
 
-/* Custom Scrollbar - Visible & Friendly */
-.gpt-scroll-container::-webkit-scrollbar {
-  width: 12px;
-}
-
-.gpt-scroll-container::-webkit-scrollbar-track {
-  background: rgba(255, 230, 235, 0.5);
+#tab-edu::-webkit-scrollbar-track {
+  background: rgba(255, 230, 235, 0.4);
   border-radius: 10px;
   border: 1px solid rgba(216, 143, 178, 0.2);
 }
 
-.gpt-scroll-container::-webkit-scrollbar-thumb {
+#tab-edu::-webkit-scrollbar-thumb {
   background: linear-gradient(180deg, #e8a0b8 0%, #d88fb2 50%, #c77a9e 100%);
   border-radius: 10px;
-  border: 2px solid rgba(255, 230, 235, 0.5);
+  border: 3px solid rgba(255, 230, 235, 0.4);
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
-.gpt-scroll-container::-webkit-scrollbar-thumb:hover {
+#tab-edu::-webkit-scrollbar-thumb:hover {
   background: linear-gradient(180deg, #f0b0c8 0%, #e8a0b8 50%, #d88fb2 100%);
   box-shadow: 0 3px 8px rgba(216, 143, 178, 0.4);
 }
 
-/* Firefox scrollbar */
-.gpt-scroll-container {
+#tab-edu {
   scrollbar-width: thin;
-  scrollbar-color: var(--accent) rgba(255, 230, 235, 0.5);
+  scrollbar-color: var(--accent) rgba(255, 230, 235, 0.4);
+}
+
+/* Education scroll container */
+.edu-scroll-container {
+  padding: 10px 5px;
+}
+
+.edu-scroll-container .showcase-info {
+  text-align: center;
+  margin-bottom: 25px;
+  padding-bottom: 20px;
+  border-bottom: 2px dashed rgba(216, 143, 178, 0.3);
+}
+
+.edu-scroll-container .showcase-info h3 {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+  color: var(--text-dark);
+}
+
+.edu-scroll-container .showcase-info p {
+  font-size: 0.95rem;
+  color: #555;
+  line-height: 1.6;
 }
 
 .gpt-grid {
