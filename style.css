@@ -863,61 +863,57 @@ h3,
   border: 1px solid var(--accent);
 }
 
-/* Education Tab - Full page scroll */
-#tab-edu {
-  height: 100%;
+/* GPT Mini Grid - Similar to Apps tab */
+.gpt-mini-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 15px;
+  max-height: 450px;
   overflow-y: auto;
-  overflow-x: hidden;
-  padding: 20px;
+  padding-right: 10px;
 }
 
-/* Custom scrollbar for education tab */
-#tab-edu::-webkit-scrollbar {
-  width: 14px;
+.gpt-mini-grid .mini-project {
+  background: rgba(255, 255, 255, 0.6);
+  padding: 15px;
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.8);
+  transition: all 0.3s;
+  position: relative;
 }
 
-#tab-edu::-webkit-scrollbar-track {
-  background: rgba(255, 230, 235, 0.4);
-  border-radius: 10px;
-  border: 1px solid rgba(216, 143, 178, 0.2);
+.gpt-mini-grid .mini-project:hover {
+  border-color: var(--accent);
+  background: white;
+  transform: translateY(-3px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
 }
 
-#tab-edu::-webkit-scrollbar-thumb {
-  background: linear-gradient(180deg, #e8a0b8 0%, #d88fb2 50%, #c77a9e 100%);
-  border-radius: 10px;
-  border: 3px solid rgba(255, 230, 235, 0.4);
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+.gpt-mini-grid .mini-project h4 {
+  font-size: 1rem;
+  margin-bottom: 5px;
 }
 
-#tab-edu::-webkit-scrollbar-thumb:hover {
-  background: linear-gradient(180deg, #f0b0c8 0%, #e8a0b8 50%, #d88fb2 100%);
-  box-shadow: 0 3px 8px rgba(216, 143, 178, 0.4);
+.gpt-mini-grid .mini-project p {
+  font-size: 0.85rem;
+  color: #666;
 }
 
-#tab-edu {
-  scrollbar-width: thin;
-  scrollbar-color: var(--accent) rgba(255, 230, 235, 0.4);
+.gpt-mini-grid .mini-tag {
+  position: absolute;
+  top: -8px;
+  right: 10px;
+  background: var(--accent);
+  color: white;
+  font-size: 0.7rem;
+  padding: 2px 8px;
+  border-radius: 5px;
 }
 
-/* Education scroll container */
-.edu-scroll-container {
-  padding: 10px 5px;
+.gpt-mini-grid .featured.mini-project {
+  background: rgba(216, 143, 178, 0.05);
+  border: 1px solid var(--accent);
 }
-
-.edu-scroll-container .showcase-info {
-  text-align: center;
-  margin-bottom: 25px;
-  padding-bottom: 20px;
-  border-bottom: 2px dashed rgba(216, 143, 178, 0.3);
-}
-
-.edu-scroll-container .showcase-info h3 {
-  font-size: 1.5rem;
-  margin-bottom: 10px;
-  color: var(--text-dark);
-}
-
-.edu-scroll-container .showcase-info p {
   font-size: 0.95rem;
   color: #555;
   line-height: 1.6;
