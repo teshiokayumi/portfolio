@@ -863,6 +863,68 @@ h3,
   border: 1px solid var(--accent);
 }
 
+/* GPT Showcase Section */
+.gpt-showcase {
+  margin-bottom: 20px;
+}
+
+.gpt-scroll-container {
+  max-height: 400px;
+  overflow-y: auto;
+  padding-right: 15px;
+  background: rgba(255, 255, 255, 0.3);
+  border-radius: 15px;
+  padding: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.5);
+}
+
+/* Custom Scrollbar */
+.gpt-scroll-container::-webkit-scrollbar {
+  width: 8px;
+}
+
+.gpt-scroll-container::-webkit-scrollbar-track {
+  background: rgba(255, 255, 255, 0.3);
+  border-radius: 10px;
+}
+
+.gpt-scroll-container::-webkit-scrollbar-thumb {
+  background: var(--accent);
+  border-radius: 10px;
+}
+
+.gpt-scroll-container::-webkit-scrollbar-thumb:hover {
+  background: #c77a9e;
+}
+
+.gpt-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 20px;
+}
+
+.gpt-grid .mini-project {
+  background: rgba(255, 255, 255, 0.7);
+  padding: 20px;
+  min-height: 120px;
+}
+
+.gpt-grid .mini-project h4 {
+  font-size: 1.1rem;
+  margin-bottom: 8px;
+  color: var(--text-dark);
+}
+
+.gpt-grid .mini-project p {
+  font-size: 0.9rem;
+  color: #555;
+}
+
+.gpt-grid .mini-tag {
+  font-size: 0.75rem;
+  padding: 3px 10px;
+}
+
 @media (max-width: 600px) {
   .works-tabs {
     flex-direction: column;
