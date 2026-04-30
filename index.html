@@ -12,6 +12,7 @@
         href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700&family=Outfit:wght@300;400;600&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="style.css">
+<base target="_blank">
 </head>
 
 <body>
@@ -166,45 +167,21 @@
                         <div class="works-showcase">
                             <div class="showcase-info">
                                 <h3>生成AI × 教育・業務支援</h3>
-                                <p>専門用語を极力排し、現場で「すぐ使える」形に最適化。セミナーから実務导入まで広く对应します。</p>
+                                <p>専門用語を極力排し、現場で「すぐ使える」形に最適化。セミナーから実務導入まで広く対応します。</p>
+                                <p class="gpt-note">※以下はすべて企業に譲渡済みのカスタムGPT制作実績です。</p>
                             </div>
-                            <div class="gpt-mini-grid">
-                                <div class="mini-project featured">
-                                    <span class="mini-tag">GPT</span>
-                                    <h4>観点別評価コメント生成</h4>
-                                    <p>教職員向け評価コメント自動生成ツール</p>
-                                </div>
-                                <div class="mini-project">
-                                    <span class="mini-tag">GPT</span>
-                                    <h4>災害時学校対応マニュアル</h4>
-                                    <p>災害発生時の学校対応手順作成支援</p>
-                                </div>
-                                <div class="mini-project">
-                                    <span class="mini-tag">GPT</span>
-                                    <h4>個別教育計画(IEP)作成</h4>
-                                    <p>特別支援学級向け IEP 作成支援</p>
-                                </div>
-                                <div class="mini-project">
-                                    <span class="mini-tag">GPT</span>
-                                    <h4>期末レポート作成</h4>
-                                    <p>小・中学校先生向け期末レポート作成</p>
-                                </div>
-                                <div class="mini-project">
-                                    <span class="mini-tag">GPT</span>
-                                    <h4>ルーブリック作成</h4>
-                                    <p>小学校教員のためのルーブリック作成</p>
-                                </div>
-                                <div class="mini-project">
-                                    <span class="mini-tag">GPT</span>
-                                    <h4>学習指導案作成</h4>
-                                    <p>学習指導案 AIアシスタント</p>
-                                </div>
-                                <div class="mini-project">
-                                    <span class="mini-tag">GPT</span>
-                                    <h4>時間割作成</h4>
-                                    <p>学校時間割作成支援ツール</p>
-                                </div>
-                            </div>\n                    </div>\n\n                    <!-- Tab: Creative -->
+                            <ul class="gpt-simple-list">
+                                <li><span class="gpt-badge">GPT</span> 観点別評価コメント生成 — 教職員向け評価コメント自動生成ツール</li>
+                                <li><span class="gpt-badge">GPT</span> 災害時学校対応マニュアル — 災害発生時の学校対応手順作成支援</li>
+                                <li><span class="gpt-badge">GPT</span> 個別教育計画（IEP）作成 — 特別支援学級向け IEP 作成支援</li>
+                                <li><span class="gpt-badge">GPT</span> 期末レポート作成 — 小・中学校先生向け期末レポート作成</li>
+                                <li><span class="gpt-badge">GPT</span> ルーブリック作成 — 小学校教員のためのルーブリック作成</li>
+                                <li><span class="gpt-badge">GPT</span> 学習指導案作成 — 学習指導案 AIアシスタント</li>
+                                <li><span class="gpt-badge">GPT</span> 時間割作成 — 学校時間割作成支援ツール</li>
+                            </ul>
+                        </div>
+                    </div>
+
                     <div id="tab-creative" class="tab-pane">
                         <div class="works-showcase">
                             <div class="showcase-info">
@@ -403,9 +380,29 @@
         </section>
     </main>
 
-    <script src="script.js"></script>
+    <script>
+    document.addEventListener('DOMContentLoaded', function () {
+        const tabBtns = document.querySelectorAll('.tab-btn');
+        const tabPanes = document.querySelectorAll('.tab-pane');
+
+        tabBtns.forEach(function (btn) {
+            btn.addEventListener('click', function () {
+                const targetId = btn.getAttribute('data-tab');
+
+                // Remove active from all buttons and panes
+                tabBtns.forEach(function (b) { b.classList.remove('active'); });
+                tabPanes.forEach(function (p) { p.classList.remove('active'); });
+
+                // Activate clicked button and target pane
+                btn.classList.add('active');
+                const targetPane = document.getElementById(targetId);
+                if (targetPane) {
+                    targetPane.classList.add('active');
+                }
+            });
+        });
+    });
+    </script>
 </body>
 
 </html>
-
-
